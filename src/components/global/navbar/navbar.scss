@@ -8,11 +8,6 @@ header {
   position: relative;
 }
 
-/* Remove underline from links */
-a {
-  text-decoration: none;
-}
-
     .logo{
       img {
         width: 10%;
@@ -34,10 +29,12 @@ nav {
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
+
   a {
     color: rgb(0, 0, 0);
     font-size: 1rem;
     opacity: 0;
+    text-decoration: none;
     transition: opacity 150ms ease-in-out;
   }
   ul {
