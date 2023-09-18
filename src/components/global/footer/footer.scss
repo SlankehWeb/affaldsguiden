@@ -1,0 +1,45 @@
+@use "../colors/colors.scss" as s;
+.footer-img{
+    width: 100%;
+    height: auto;
+}
+footer{
+    display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+background-color: s.$dark-green;
+.footer-colum1{
+    grid-area: 1 / 1 / 3 / 3;
+    max-width: 45%;
+    color: s.$white;
+    margin-left: 20%;
+    img{
+        margin-right: 3%;
+    }
+}
+
+.footer-colum2{
+    margin-left: 20%;
+    color: s.$gray;
+    grid-area: 3 / 1 / 4 / 3;
+}
+
+.footer-colum3{
+    color: s.$gray;
+    grid-area: 3 / 5 / 4 / 6;
+    p{
+        bottom: 1%;
+    }
+    img{    
+        width: 25px;
+        position: relative;
+        top: 1vh;
+    }
+    a{
+        color: s.$gray;
+        text-decoration: none;
+    }
+}
+}
