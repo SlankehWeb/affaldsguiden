@@ -1,10 +1,14 @@
-import ApiTest from "./apitest";
+import AppRouter from "./components/approuter/approuter";
+import NavBar from "./components/global/navbar/navbar";
 
 function App() {
   return (
+    <>
     <div className="App">
-      <ApiTest/>
+      <NavBar/>
+      <AppRouter/>
     </div>
+    </>
   );
 }
 
