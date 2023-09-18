@@ -7,15 +7,21 @@ header {
   background: rgb(255, 255, 255);
   position: relative;
 }
-img {
-  width: 40%;
-  height: auto;
-}
 
 /* Remove underline from links */
 a {
   text-decoration: none;
 }
+
+    .logo{
+      img {
+        width: 10%;
+        height: auto;
+      }
+      p{
+        display: none;
+      }
+      }
 
 /* Nav styles */
 nav {
@@ -101,7 +107,7 @@ nav {
 }
 
 /* Media query for screens wider than 1400px */
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
   /* Logo styles */
   .logo {
     position: relative;
@@ -112,10 +118,21 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 2vh;
+    height: auto;
+    width: auto;
+    left: 3vw;
+    img{
+      margin-right: 1vw;
+      width: 10%;
+      height: auto;
+
+    }
     a {
       font-size: 1em;
       color: rgb(255, 255, 255);
     }
+    p{display: block;}
   }
   /* Hide the nav toggle label and checkbox */
   .nav-toggle-label {
@@ -130,19 +147,19 @@ nav {
     grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
   }
   /* Position logo in the grid */
-  .logo {
-    grid-column: 2 / 3;
-  }
+
   /* Position the nav in the grid and remove border on last child */
   nav {
-    grid-column: 3 / 4;
+    position: relative;
     all: unset;
     a {
       opacity: 1;
+      font-size: 1vw;
     }
     li {
       position: relative;
-      top: 2.5vw;
+      top: 1.5vw;
+      right: 50%;
       padding-right: 30px;
       &:last-child {
         border-right: none;

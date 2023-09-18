@@ -5,7 +5,15 @@ const NavBar = () => {
   return (
     <>
       <header>
-  
+        <figure className="logo">
+        <img
+          src={require("./Group 2.png")}
+          alt="logo"
+        />
+        <figcaption>
+          <p>Affaldsguiden</p>
+        </figcaption>
+        </figure>
 
         <input type="checkbox" id="nav-toggle" className="nav-toggle" />
 
