@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <img className="footer-img" src={require("./Path 2.png")} alt="logo" />
+      <img className="footer-img" src={require("./pictures/Path 2.png")} alt="logo" />
       <footer>
         <div className="footer-colum1">
           <h3>
             {" "}
-            <img src={require("./Group 2.png")} alt="logo" />
+            <img src={require("./pictures/Group 2.png")} alt="logo" />
              Affaldsguiden
           </h3>
           <p>
@@ -32,7 +32,7 @@ const Footer = () => {
               Back to top{" "}
               <img
                 className="footer-img"
-                src={require("./vuesax-outline-arrow-up.png")}
+                src={require("./pictures/vuesax-outline-arrow-up.png")}
                 alt="logo"
               />
             </p>
