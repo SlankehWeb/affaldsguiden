@@ -41,7 +41,7 @@ const SortingCards = () => {
                       alt={data.title}
                     />
                   </div>
-                  <figcaption>
+                  <figcaption style={{backgroundColor:`#${data.color}`}}>
                     <p>{data.title}</p>
                   </figcaption>
                 </figure>
