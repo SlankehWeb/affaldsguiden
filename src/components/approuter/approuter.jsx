@@ -6,6 +6,7 @@ import OrderContainerPage from "../pages/ordercontainerpage.jsx/ordercontainerpa
 import ErrorPage from "../pages/pageNotFound/error404";
 import Login from "../pages/login/login";
 import SortingDetails from "../pages/sortingpage/sortingdetails/sortingdetails";
+import StationLocationDetail from "../pages/recyclestationpage/stationlocationdetail/stationlocationdetail";
 
 const AppRouter = () => {
   return (
@@ -14,6 +15,7 @@ const AppRouter = () => {
       <Route path="/sortering" element={<SortingPage/>} />
       <Route path="/sortering/:id" element={<SortingDetails/>} />
       <Route path="/genbrugsstaioner" element={<RecycleStationPage/>} />
+      <Route path="/genbrugsstaioner/:id" element={<StationLocationDetail/>} />
       <Route path="/bestilbeholder" element={<OrderContainerPage/>} />
       <Route path="/login" element={<Login/>}/>
       <Route path="*" element={<ErrorPage/>} />

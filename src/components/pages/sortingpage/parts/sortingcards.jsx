@@ -31,7 +31,7 @@ const SortingCards = () => {
   
     return (
       <>
-        <div className="eventsbox">
+        <div className="sortingcardbox">
           {events &&
             events.map((data) => {
               console.log(data);
