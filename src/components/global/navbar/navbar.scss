@@ -2,7 +2,7 @@
 
 .img1{
   position: relative;
-  left: 40%;
+  left: 80%;
    width: 6%;
    height: auto;
    bottom: 5.5vh;
@@ -15,9 +15,14 @@ header {
   padding-top: 1%;
   background: rgb(255, 255, 255);
   position: relative;
+  padding-bottom: 3%;
+  a{
+  text-decoration: none;
+  }
 }
 
     .logo{
+    color: black;
       img {
         width: 8%;
         height: auto;
@@ -130,7 +135,7 @@ nav {
 
    .img1{
    position: relative;
-   left: 70%;
+   left: 110%;
    top: 80%;
     width: 3%;
     height: auto;
@@ -173,7 +178,6 @@ nav {
   header {
     display: grid;
     grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-    margin-bottom: 2%;
   }
   /* Position logo in the grid */
 

@@ -6,14 +6,13 @@ const Footer = () => {
     <>
       <img
         className="footer-img"
-        src={require("./pictures/Path 2.png")}
+        src={require("./pictures/Path 2.webp")}
         alt="logo"
       />
       <footer>
         <div className="footer-colum1">
           <h3>
-            {" "}
-            <img src={require("./pictures/Group 2.png")} alt="logo" />
+            <img src={require("./pictures/Group 2.webp")} alt="logo" />
             Affaldsguiden
           </h3>
           <p>
@@ -36,7 +35,7 @@ const Footer = () => {
               Back to top
               <img
                 className="footer-img2"
-                src={require("./pictures/vuesax-outline-arrow-up.png")}
+                src={require("./pictures/vuesax-outline-arrow-up.webp")}
                 alt="logo"
               />
             </p>

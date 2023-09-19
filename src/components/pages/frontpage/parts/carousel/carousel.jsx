@@ -37,9 +37,9 @@ const Carousel = () => {
       // Enable autoplay for the carousel
       autoPlay="true"
       // Set the animation duration for slide transitions to 2000ms (2 seconds)
-      animationDuration="2000"
+      animationDuration="4000"
       // Set the autoplay interval to 1000ms (1 second)
-      autoPlayInterval="5000"
+      autoPlayInterval="500"
       // Disable the dots navigation controls
       disableDotsControls="true"
       // Enable infinite looping of carousel items

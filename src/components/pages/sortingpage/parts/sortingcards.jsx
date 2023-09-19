@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "./sortingcards.scss";
 
 const SortingCards = () => {
   const [events, setEvents] = useState([]);
@@ -28,25 +29,27 @@ const SortingCards = () => {
 
   return (
     <>
-      {events &&
-        events.map((data) => {
-          console.log(data);
-          return (
-            <figure key={data.id}>
-              <Link to={`/sortering/${data.id}`}>
-                <div className="imgbox">
-                  <img
-                    src={`http://localhost:4000/Assets/Images/Guide/Categories/${data.filename}`}
-                    alt={data.title}
-                  />
-                </div>
-                <figcaption style={{ backgroundColor: `#${data.color}` }}>
-                  <p>{data.title}</p>
-                </figcaption>
-              </Link>
-            </figure>
-          );
-        })}
+      <div className="sortingcardcontainer">
+        {events &&
+          events.map((data) => {
+            console.log(data);
+            return (
+              <figure key={data.id}>
+                <Link to={`/sortering/${data.id}`}>
+                  <div className="imgbox">
+                    <img
+                      src={`http://localhost:4000/Assets/Images/Guide/Categories/${data.filename}`}
+                      alt={data.title}
+                    />
+                  </div>
+                  <figcaption style={{ backgroundColor: `#${data.color}` }}>
+                    <p>{data.title}</p>
+                  </figcaption>
+                </Link>
+              </figure>
+            );
+          })}
+      </div>
     </>
   );
 };

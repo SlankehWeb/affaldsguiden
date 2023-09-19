@@ -1,0 +1,37 @@
+.locationcontainer {
+    margin-top: 8%;
+    margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 10%;
+  margin-right: 10%;
+  a {
+    text-decoration: none;
+  }
+  figure {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 2px rgb(255, 255, 255),
+      0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    background-color: white;
+    .locationmap {
+      width: 100%;
+      height: auto;
+      border: none;
+    }
+    figcaption {
+      margin-left: 5%;
+      padding-bottom: 10%;
+      h3 {
+        font-weight: 400;
+        color: black;
+      }
+      p {
+        color: black;
+      }
+    }
+  }
+}

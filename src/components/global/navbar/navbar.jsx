@@ -1,44 +1,77 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./navbar.scss";
 
 const NavBar = () => {
   return (
     <>
       <header>
-        <figure className="logo">
-        <img
-          src={require("./Group 2.png")}
-          alt="logo"
-        />
-        <figcaption>
-          <p>Affaldsguiden</p>
-        </figcaption>
-        </figure>
+        <Link to={`/`}>
+          <figure className="logo">
+            <img src={require("./pictures/Group 2.webp")} alt="logo" />
+            <figcaption>
+              <p>Affaldsguiden</p>
+            </figcaption>
+          </figure>
+        </Link>
 
         <input type="checkbox" id="nav-toggle" className="nav-toggle" />
 
         <nav>
           <ul>
             <li>
-              <Link to="/">Forside</Link>
+              <NavLink
+                to="/"
+                style={({ isActive }) => ({
+                  color: isActive ? "#6da830" : "black",
+                  borderTop: isActive ? "solid 1px #6da830" : "none",
+                })}
+              >
+                Forside
+              </NavLink>
             </li>
             <li>
-              <a href="/sortering">Sortering</a>
+              <NavLink
+                to="/sortering"
+                style={({ isActive }) => ({
+                  color: isActive ? "#6da830" : "black",
+                  borderTop: isActive ? "solid 1px #6da830" : "none",
+                })}
+              >
+                Sortering
+              </NavLink>
             </li>
             <li>
-              <a href="/genbrugsstaioner">Genbrugsstationer</a>
+              <NavLink
+                to="/genbrugsstaioner"
+                style={({ isActive }) => ({
+                  color: isActive ? "#6da830" : "black",
+                  borderTop: isActive ? "solid 1px #6da830" : "none",
+                })}
+              >
+                Genbrugsstationer
+              </NavLink>
             </li>
             <li>
-              <a href="/bestilbeholder">Bestil beholder</a>
+              <NavLink
+                to="/bestilbeholder"
+                style={({ isActive }) => ({
+                  color: isActive ? "#6da830" : "black",
+                  borderTop: isActive ? "solid 1px #6da830" : "none",
+                })}
+              >
+                Bestil beholder
+              </NavLink>
             </li>
           </ul>
         </nav>
-        <Link to={`/login`}>
-        <img className="img1"
-          src={require("./Ellipse 1.png")}
-          alt="loginbackground"
-        />
-        </Link>
+        <div className="img1">
+          <Link to={`/login`}>
+            <img
+              src={require("./pictures/Ellipse 1.webp")}
+              alt="loginbackground"
+            />
+          </Link>
+        </div>
         <label
           htmlFor="nav-toggle"
           title="Show navbar"
