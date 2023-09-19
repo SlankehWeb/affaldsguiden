@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import "./stationlocationdetail.scss";
+
 
 const StationLocationDetail = () => {
     const [data, setData] = useState([]);
@@ -34,13 +36,12 @@ const StationLocationDetail = () => {
       <>
         {data && (
           <>
-            <figure className="readCard" key={data.id}>
-                <iframe title="googlemapimagie" id="googlemapid" height="500px" width="100%"></iframe>
+            <figure className="locationdetailCard" key={data.id}>
+                <iframe title="googlemapimagie" id="googlemapid" className="googlemap"></iframe>
                 <figcaption>
               <h2>{data.name}</h2>
               <p>{data.address}</p>
-              <p>{data.zipcode}</p>
-              <p>{data.city}</p>
+              <p>{data.zipcode} {data.city}</p>
               <p>{data.country}</p>
               </figcaption>
             </figure>
