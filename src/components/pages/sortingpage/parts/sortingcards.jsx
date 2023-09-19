@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
 
 const SortingCards = () => {
 
@@ -34,6 +36,7 @@ const SortingCards = () => {
             events.map((data) => {
               console.log(data);
               return (
+                <Link to={`/sortering/${data.id}`}>
                 <figure key={data.id}>
                   <div className="imgbox">
                     <img
@@ -45,6 +48,7 @@ const SortingCards = () => {
                     <p>{data.title}</p>
                   </figcaption>
                 </figure>
+                </Link>
               );
             })}
         </div>

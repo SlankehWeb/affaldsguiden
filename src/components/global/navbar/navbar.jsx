@@ -33,7 +33,7 @@ const NavBar = () => {
             </li>
           </ul>
         </nav>
-        <Link>
+        <Link to={`/login`}>
         <img className="img1"
           src={require("./Ellipse 1.png")}
           alt="loginbackground"
