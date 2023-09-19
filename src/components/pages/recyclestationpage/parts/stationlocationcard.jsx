@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-
 const StationLocationCard = () => {
   const [events, setEvents] = useState([]);
 
@@ -29,28 +28,24 @@ const StationLocationCard = () => {
 
   return (
     <>
-      <div className="stationcardbox">
-        {events &&
-          events.map((data) => {
-            console.log(data);
-            return (
-                <Link to={`/genbrugsstaioner/${data.id}`}>
-              <figure key={data.id}>
-                <img
-                  src={require("./thumbnail.jpg")}
-                  alt={data.NAME}
-                />
+      {events &&
+        events.map((data) => {
+          console.log(data);
+          return (
+            <figure key={data.id}>
+              {" "}
+              <Link to={`/genbrugsstaioner/${data.id}`}>
+                <img src={require("./thumbnail.jpg")} alt={data.NAME} />
                 <figcaption>
                   <h3>{data.name}</h3>
                   <p>{data.address}</p>
                   <p>{data.zipcode}</p>
                   <p>{data.city}</p>
                 </figcaption>
-              </figure>
               </Link>
-            );
-          })}
-      </div>
+            </figure>
+          );
+        })}
     </>
   );
 };

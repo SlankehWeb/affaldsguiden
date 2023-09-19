@@ -26,15 +26,16 @@ const StationLocationDetail = () => {
       getData(); // Call the getData function when the 'id' parameter changes
     }, [id]); // This effect will run whenever 'id' changes
   
+    useEffect(()=>{
+        const ifameData=document.getElementById("googlemapid")
+        ifameData.src=`https://maps.google.com/maps?q=${data.longtitude},${data.latitude}&hl=es;&output=embed`
+    })
     return (
       <>
         {data && (
           <>
             <figure className="readCard" key={data.id}>
-            <img
-                  src={require("../parts/thumbnail.jpg")}
-                  alt={data.NAME}
-                />
+                <iframe title="googlemapimagie" id="googlemapid" height="500px" width="100%"></iframe>
                 <figcaption>
               <h2>{data.name}</h2>
               <p>{data.address}</p>
