@@ -15,7 +15,7 @@ const FrontPageArticals = () => {
         </div>
         <div className="colum2">
         <img
-    src={require("./pictures/unsplashsN4u56baSB0.png")}
+    src={require("./pictures/unsplashsN4u56baSB0.webp")}
     alt="silver trash can with trash"
   />
         </div>
@@ -23,7 +23,7 @@ const FrontPageArticals = () => {
       <div className="articalparent2">
       <div className="colum1">
       <img
-    src={require("./pictures/Group 238974.png")}
+    src={require("./pictures/Group 238974.webp")}
     alt="rainbow of trashcans"
   />
       </div>

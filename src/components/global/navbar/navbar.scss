@@ -1,3 +1,12 @@
+@use "../colors/colors.scss" as s;
+
+.img1{
+  position: relative;
+  left: 40%;
+   width: 6%;
+   height: auto;
+   bottom: 5.5vh;
+  }
 /* Header styles */
 header {
   z-index: 2;
@@ -10,7 +19,7 @@ header {
 
     .logo{
       img {
-        width: 10%;
+        width: 8%;
         height: auto;
       }
       p{
@@ -102,9 +111,31 @@ nav {
     }
   }
 }
+@media screen and (min-width: 700px){
+
+  .img1{
+     width: 4%;
+     height: auto;
+    }
+    .logo{
+      img {
+        width: 6%;
+        height: auto;
+      }
+    }
+}
 
 /* Media query for screens wider than 1400px */
 @media screen and (min-width: 1100px) {
+
+   .img1{
+   position: relative;
+   left: 70%;
+   top: 80%;
+    width: 3%;
+    height: auto;
+   }
+  
   /* Logo styles */
   .logo {
     position: relative;
@@ -127,7 +158,7 @@ nav {
     }
     a {
       font-size: 1em;
-      color: rgb(255, 255, 255);
+      color: s.$white;
     }
     p{display: block;}
   }

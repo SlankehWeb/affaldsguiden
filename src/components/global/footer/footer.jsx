@@ -35,7 +35,7 @@ const Footer = () => {
             <p>
               Back to top
               <img
-                className="footer-img"
+                className="footer-img2"
                 src={require("./pictures/vuesax-outline-arrow-up.png")}
                 alt="logo"
               />

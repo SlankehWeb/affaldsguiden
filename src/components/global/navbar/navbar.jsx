@@ -33,7 +33,12 @@ const NavBar = () => {
             </li>
           </ul>
         </nav>
-
+        <Link>
+        <img className="img1"
+          src={require("./Ellipse 1.png")}
+          alt="loginbackground"
+        />
+        </Link>
         <label
           htmlFor="nav-toggle"
           title="Show navbar"

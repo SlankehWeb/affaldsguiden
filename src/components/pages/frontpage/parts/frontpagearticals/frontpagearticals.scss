@@ -14,7 +14,7 @@ grid-template-rows: 1fr;
 grid-column-gap: 0px;
 grid-row-gap: 0px;
     .colum1{
-        position: absolute;
+        position: relative;
         max-width: 60%;
         top: 15%;
         grid-area: 1 / 1 / 2 / 3;
@@ -50,7 +50,7 @@ position: relative;
     grid-area: 1 / 1 / 2 / 2;
 }
 .colum2{
-    position: absolute;
+    position: relative;
     margin-left: 20%;
     left: 15%;
     justify-content: center;

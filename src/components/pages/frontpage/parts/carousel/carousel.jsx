@@ -6,15 +6,15 @@ import "./carousel.scss";
 // Create an array of items
 const items = [
   <img
-    src={require("./Slideshow/affald-skov-1.jpg")}
+    src={require("./Slideshow/affald-skov-1.webp")}
     alt="center-square-wroclaw"
   />,
   <img
-    src={require("./Slideshow/affald-strand-2.jpg")}
+    src={require("./Slideshow/affald-strand-2.webp")}
     alt="city-houses-reykjavik"
   />,
   <img
-    src={require("./Slideshow/malerspande.jpg")}
+    src={require("./Slideshow/malerspande.webp")}
     alt="fishmarket-hamborg"
   />,
 
@@ -24,6 +24,12 @@ const items = [
 const Carousel = () => {
   return (
     <AliceCarousel
+    renderPrevButton={() => {
+      return <img className="leftarrow" src={require("./arrowleft.png")} alt="button_prev" />;
+    }}
+    renderNextButton={() => {
+      return <img className="rightarrow" src={require("./arrowright.png")} alt="button_next" />;
+    }}
       // Enable mouse tracking for the carousel
       mouseTracking
       // Enable automatic height adjustment based on the content
@@ -38,10 +44,9 @@ const Carousel = () => {
       disableDotsControls="true"
       // Enable infinite looping of carousel items
       infinite="true"
-      // Disable the buttons navigation controls (previous and next)
-      disableButtonsControls="true"
       // Pass the array of items to the carousel
       items={items}
+
     />
   );
 };
