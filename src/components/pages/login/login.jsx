@@ -50,9 +50,9 @@ const Login = () => {
         </figure>
 
         <div className="loginContainer">
+          <h2>Login</h2>
           {!loginData && !loginData.username ? (
             <form onSubmit={handleSubmit(formSubmit)}>
-              <h2>Login</h2>
               <div>
                 <input
                   type="text"

@@ -1,12 +1,12 @@
 @use "../colors/colors.scss" as s;
 
-.img1{
+.img1 {
   position: relative;
   left: 80%;
-   width: 6%;
-   height: auto;
-   bottom: 5.5vh;
-  }
+  width: 6%;
+  height: auto;
+  bottom: 5.5vh;
+}
 /* Header styles */
 header {
   z-index: 2;
@@ -16,21 +16,21 @@ header {
   background: rgb(255, 255, 255);
   position: relative;
   padding-bottom: 3%;
-  a{
-  text-decoration: none;
+  a {
+    text-decoration: none;
   }
 }
 
-    .logo{
-    color: black;
-      img {
-        width: 8%;
-        height: auto;
-      }
-      p{
-        display: none;
-      }
-      }
+.logo {
+  color: black;
+  img {
+    width: 8%;
+    height: auto;
+  }
+  p {
+    display: none;
+  }
+}
 
 /* Nav styles */
 nav {
@@ -116,31 +116,29 @@ nav {
     }
   }
 }
-@media screen and (min-width: 700px){
-
-  .img1{
-     width: 4%;
-     height: auto;
+@media screen and (min-width: 700px) {
+  .img1 {
+    width: 4%;
+    height: auto;
+  }
+  .logo {
+    img {
+      width: 6%;
+      height: auto;
     }
-    .logo{
-      img {
-        width: 6%;
-        height: auto;
-      }
-    }
+  }
 }
 
 /* Media query for screens wider than 1400px */
 @media screen and (min-width: 1100px) {
-
-   .img1{
-   position: relative;
-   left: 110%;
-   top: 80%;
+  .img1 {
+    position: relative;
+    left: 110%;
+    top: 80%;
     width: 3%;
     height: auto;
-   }
-  
+  }
+
   /* Logo styles */
   .logo {
     position: relative;
@@ -155,17 +153,18 @@ nav {
     height: auto;
     width: auto;
     left: 3vw;
-    img{
+    img {
       margin-right: 1vw;
       width: 10%;
       height: auto;
-
     }
     a {
       font-size: 1em;
       color: s.$white;
     }
-    p{display: block;}
+    p {
+      display: block;
+    }
   }
   /* Hide the nav toggle label and checkbox */
   .nav-toggle-label {

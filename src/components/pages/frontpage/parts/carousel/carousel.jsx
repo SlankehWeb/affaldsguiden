@@ -17,19 +17,30 @@ const items = [
     src={require("./Slideshow/malerspande.webp")}
     alt="fishmarket-hamborg"
   />,
-
 ];
 
 // Define a functional component
 const Carousel = () => {
   return (
     <AliceCarousel
-    renderPrevButton={() => {
-      return <img className="leftarrow" src={require("./arrowleft.png")} alt="button_prev" />;
-    }}
-    renderNextButton={() => {
-      return <img className="rightarrow" src={require("./arrowright.png")} alt="button_next" />;
-    }}
+      renderPrevButton={() => {
+        return (
+          <img
+            className="leftarrow"
+            src={require("./arrowleft.png")}
+            alt="button_prev"
+          />
+        );
+      }}
+      renderNextButton={() => {
+        return (
+          <img
+            className="rightarrow"
+            src={require("./arrowright.png")}
+            alt="button_next"
+          />
+        );
+      }}
       // Enable mouse tracking for the carousel
       mouseTracking
       // Enable automatic height adjustment based on the content
@@ -46,7 +57,6 @@ const Carousel = () => {
       infinite="true"
       // Pass the array of items to the carousel
       items={items}
-
     />
   );
 };

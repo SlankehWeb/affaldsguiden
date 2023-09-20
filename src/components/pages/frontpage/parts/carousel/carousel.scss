@@ -1,28 +1,28 @@
 .alice-carousel__stage-item {
   overflow: hidden;
-    img {
-      width: 100%;
-      height: auto;
-    }
+  img {
+    width: 100%;
+    height: auto;
   }
-  .leftarrow{
-    position: absolute;
-    left: 5%;
-    bottom: 50%;
+}
+.leftarrow {
+  position: absolute;
+  left: 5%;
+  bottom: 50%;
+}
+.rightarrow {
+  position: absolute;
+  right: 5%;
+  bottom: 50%;
+}
+@media screen and (max-width: 1100px) {
+  .alice-carousel__stage-item {
+    display: none;
   }
-  .rightarrow{
-    position: absolute;
-    right: 5%;
-    bottom: 50%;
+  .leftarrow {
+    display: none;
   }
-  @media screen and (max-width: 1100px){
-    .alice-carousel__stage-item{
-      display: none;
-    }
-    .leftarrow{
-      display: none;
-    }
-    .rightarrow{
-      display: none;
-    }
+  .rightarrow {
+    display: none;
   }
+}

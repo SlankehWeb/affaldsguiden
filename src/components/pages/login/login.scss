@@ -1,28 +1,52 @@
-.pageContainer{
-    margin-top: 10%;
-    margin-bottom: 10%;
-    margin-left: 20%;
-    margin-right: 20%;
-    display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: 1fr;
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-    .logintextdiv{
-        grid-area: 1 / 1 / 2 / 2; 
-        figure{
-            img{
-                width: 25px;
-            }
-        }
+@use "../../global/colors/colors.scss" as s;
+
+.pageContainer {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  .logintextdiv {
+    grid-area: 1 / 1 / 2 / 2;
+    figure {
+      img {
+        width: 25px;
+      }
     }
-.loginContainer{
+  }
+  .loginContainer {
+    max-width: 80%;
     grid-area: 1 / 2 / 2 / 3;
-    form{
-        padding-top: 2%;
-        padding-bottom: 5%;
+    border-radius: 10px;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    background-color: #fbfcfc;
+    box-shadow: inset 0 0 0 2px white, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    h2 {
+      margin-left: 10%;
+    }
+    form {
+      text-align: center;
+      button {
+        margin-top: 3%;
+        margin-bottom: 3%;
+        cursor: pointer;
+        padding: 2%;
+        width: 150px;
+        font-size: 1em;
         text-align: center;
-        background-color: aqua;
-    }  
-}
+        background-color: s.$dark-green;
+        border: 2px solid s.$dark-green;
+        border-radius: 5px;
+        color: white;
+        margin-right: 5%;
+        margin-left: 5%;
+        text-decoration: none;
+      }
+    }
+  }
 }
