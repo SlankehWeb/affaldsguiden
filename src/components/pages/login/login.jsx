@@ -2,9 +2,9 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useAuth } from "../../auth/auth";
 import Profile from "../profile/profile";
+import "./login.scss";
 
 const Login = () => {
- 
   const { loginData, setLoginData } = useAuth();
   const {
     register,
@@ -39,9 +39,20 @@ const Login = () => {
   return (
     <>
       <div className="pageContainer">
+        <figure className="logintextdiv">
+          <figcaption>
+            <h2>
+              <img src={require("./pictures/Group 2.webp")} alt="logo" />
+              Affaldsguiden
+            </h2>
+            <p>Log ind på Affaldsguiden for at anmelde stationer</p>
+          </figcaption>
+        </figure>
+
         <div className="loginContainer">
           {!loginData && !loginData.username ? (
             <form onSubmit={handleSubmit(formSubmit)}>
+              <h2>Login</h2>
               <div>
                 <input
                   type="text"
@@ -74,7 +85,7 @@ const Login = () => {
               <p>
                 {`Du er logget ind som ${loginData.user.firstname} ${loginData.user.lastname} `}{" "}
               </p>
-              <Profile/>
+              <Profile />
               <button onClick={() => logOut()} id="logout">
                 LOG UD
               </button>

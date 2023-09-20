@@ -1,0 +1,28 @@
+.pageContainer{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+    .logintextdiv{
+        grid-area: 1 / 1 / 2 / 2; 
+        figure{
+            img{
+                width: 25px;
+            }
+        }
+    }
+.loginContainer{
+    grid-area: 1 / 2 / 2 / 3;
+    form{
+        padding-top: 2%;
+        padding-bottom: 5%;
+        text-align: center;
+        background-color: aqua;
+    }  
+}
+}
