@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "./frontpagearticals.scss";
 
 const FrontPageArticals = () => {
@@ -21,9 +23,13 @@ const FrontPageArticals = () => {
               at sortere hjemme hos dig.
             </p>
             <div>
+              <Link to="/sortering">
               <button>Se affaldsguiden</button>
+              </Link>
+              <Link to="/bestilbeholder">
               <button className="bottondif">Bestil storskrald</button>
-            </div>
+           </Link> 
+           </div>
           </div>
         </div>
         <div className="articalparent2">
@@ -41,7 +47,8 @@ const FrontPageArticals = () => {
               when an unknown printer took a galley of type and scramble it to
               make a type specimen book. It has survived not only
             </p>
-            <button>Bestil nu</button>
+            <Link to="/bestilbeholder">
+            <button>Bestil nu</button></Link>
           </div>
         </div>
       </div>
