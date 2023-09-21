@@ -1,3 +1,4 @@
+@use "../../../global/colors/colors.scss" as s;
 .ordercontainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -23,6 +24,38 @@
       margin-top: 15%;
       margin-left: 5%;
     }
+  }
+  form{
+    margin-left: 5%;
+    position: relative;
+    padding-bottom: 20%;
+    input{
+      width: 95%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+      button {
+        position:absolute;
+        right: 0%;
+        top: 85%;
+        cursor: pointer;
+        padding: 2%;
+        width: 150px;
+        font-size: 1em;
+        text-align: center;
+        background-color: s.$light-green;
+        border: 2px solid s.$light-green;
+        border-radius: 5px;
+        color: s.$dark-green;
+        margin-right: 5%;
+        margin-left: 5%;
+        text-decoration: none;
+      }
+    
   }
 }
 

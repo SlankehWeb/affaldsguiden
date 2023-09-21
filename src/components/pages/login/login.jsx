@@ -56,7 +56,7 @@ const Login = () => {
               <div>
                 <input
                   type="text"
-                  placeholder="Indtast brugernavn"
+                  placeholder="E-mail"
                   {...register("username", { required: true })}
                 />
                 {errors.username && (
@@ -65,7 +65,7 @@ const Login = () => {
               </div>
               <div>
                 <input
-                  placeholder="Indtast password"
+                  placeholder="Password"
                   type="password"
                   {...register("password", { required: true })}
                 />

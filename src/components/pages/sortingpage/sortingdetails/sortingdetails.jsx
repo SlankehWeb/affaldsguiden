@@ -41,7 +41,7 @@ const SortingDetails = () => {
                 return (
                 <div key={category.id}>
                     <img
-                      src={`http://localhost:40000/Assets/Images/Guide//Icons/${category.icon_filename}`}
+                      src={`http://localhost:4000/Assets/Images/Guide/Icons/${category.icon_filename}`}
                       alt={category.title}
                     />
                 <p>{category.title}</p>
