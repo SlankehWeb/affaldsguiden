@@ -32,12 +32,20 @@ const SortingDetails = () => {
         <>
           <figure className="readCard" key={data.id}>
             <h2>{data.title}</h2>
-
+        <img
+                      src={`http://localhost:4000/Assets/Images/Guide/Categories/${data.filename}`}
+                      alt={data.title}
+                    />
             {data.categories &&
               data.categories.map((category) => {
                 return (
                 <div key={category.id}>
+                    <img
+                      src={`http://localhost:40000/Assets/Images/Guide//Icons/${category.icon_filename}`}
+                      alt={category.title}
+                    />
                 <p>{category.title}</p>
+        
                 </div>)
               })}
           </figure>
