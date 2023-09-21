@@ -42,16 +42,16 @@ const Order = () => {
         </div>
         <div className="figuregrid">
           {data &&
-            data.map((data) => {
+            data.map((container) => {
               return (
-                <figure key={data.id}>
-                  <Link to={`/bestil/${data.id}`}>
+                <figure key={container.id}>
+                  <Link to={`/bestilbeholder/${container.id}`}>
                     <img
-                      src={`http://localhost:4000/Assets/Images/Icons/${data.icon_filename}`}
-                      alt={data.name}
+                      src={`http://localhost:4000/Assets/Images/Icons/${container.icon_filename}`}
+                      alt={container.name}
                     />
                     <figcaption>
-                      <p>{data.name}</p>
+                      <p>{container.name}</p>
                     </figcaption>
                   </Link>
                 </figure>
