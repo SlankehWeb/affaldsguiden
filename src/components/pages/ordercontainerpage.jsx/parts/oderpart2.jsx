@@ -4,35 +4,40 @@ import { useParams } from "react-router-dom";
 import "./orderpart2.scss";
 
 const OrderPart2 = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const { container_id } = useParams();
+ // Initialize the form using react-hook-form
+ const {
+  register,            // Register form input fields
+  handleSubmit,        // Handle form submission
+  formState: { errors },  // Manage form errors
+} = useForm();
 
-  const formSubmit = async (formObject) => {
-    const api_endpoint = "http://localhost:4000/orders";
+// Get the container_id parameter from the URL using react-router-dom
+const { container_id } = useParams();
 
-    const formData = new URLSearchParams();
-    formData.append("container_id", container_id);
-    formData.append("fullname", formObject.fullname);
-    formData.append("address", formObject.address);
-    formData.append("zipcode", formObject.zipcode);
-    formData.append("city", formObject.city);
-    formData.append("email", formObject.email);
-    formData.append("phone", formObject.phone);
+// Handle form submission
+const formSubmit = async (formObject) => {
+  const api_endpoint = "http://localhost:4000/orders";
 
-    try {
-      const result = await axios.post(api_endpoint, formData);
-      if (result.data) {
-        console.log(result.data);
-      }
-    } catch (error) {
-      console.error(error);
+  // Create a FormData object to send form data to the server
+  const formData = new URLSearchParams();
+  formData.append("container_id", container_id);
+  formData.append("fullname", formObject.fullname);
+  formData.append("address", formObject.address);
+  formData.append("zipcode", formObject.zipcode);
+  formData.append("city", formObject.city);
+  formData.append("email", formObject.email);
+  formData.append("phone", formObject.phone);
+
+  try {
+    // Send a POST request to the API endpoint with form data
+    const result = await axios.post(api_endpoint, formData);
+    if (result.data) {
+      console.log(result.data);
     }
-  };
-
+  } catch (error) {
+    console.error(error);
+  }
+};
   return (
     <div className="ordercontainer">
       <div>

@@ -1,38 +1,61 @@
+// Import necessary dependencies and components
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useAuth } from "../../auth/auth";
 import Profile from "../profile/profile";
 import "./login.scss";
 
+// Define the Login component
 const Login = () => {
+  // Access authentication data and functions using the useAuth hook
   const { loginData, setLoginData } = useAuth();
+
+  // Initialize form validation using react-hook-form
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
+  // Function to handle form submission
   const formSubmit = async (form) => {
+    // Create a URL-encoded form data
     const formData = new URLSearchParams();
     formData.append("username", form.username);
     formData.append("password", form.password);
+
+    // Define the API endpoint for login
     const endpoint = `http://localhost:4000/login`;
 
     try {
+      // Send a POST request to the login endpoint
       const result = await axios.post(endpoint, formData);
+
+      // Call function to handle session data
       handleSessionData(result.data);
     } catch (err) {
+      // Handle any errors that occur during the login request
       console.error(`Kunne ikke logge ind: ${err}`);
     }
   };
+
+  // Function to handle session data after successful login
   const handleSessionData = async (data) => {
     if (data) {
+      // Store the login token in the session storage
       sessionStorage.setItem("token", JSON.stringify(data));
+
+      // Update the authentication context with the user data
       setLoginData(data);
     }
   };
+
+  // Function to log out the user
   const logOut = () => {
+    // Remove the login token from session storage
     sessionStorage.removeItem("token");
+
+    // Clear the authentication context
     setLoginData("");
   };
 
