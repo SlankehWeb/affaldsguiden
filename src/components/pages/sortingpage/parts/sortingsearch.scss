@@ -1,3 +1,28 @@
 .sortingsearch{
   text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  .h2text1{
+    color: #119B1E;
+    font-weight: 600;
+  }
+  .h2text2{
+   color: #0E4F2D;
+       font-weight: 600;
+
+  }
+  input{
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 2px white, 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+
+  }
+  button{
+    display: none;
+  }
 }

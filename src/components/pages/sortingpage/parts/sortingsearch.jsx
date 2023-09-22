@@ -11,8 +11,8 @@ const SortingSearch=({ onSearch }) => {
   return (
     <>
     <div className="sortingsearch">
-      <h2>Din guide</h2>
-      <h2>til en sund affaldssortering</h2>
+      <h2 className="h2text1">Din guide</h2>
+      <h2 className="h2text2">til en sund affaldssortering</h2>
       <input
         type="text"
         placeholder="Søg på affald"
